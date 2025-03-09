@@ -94,7 +94,6 @@ const createInternalContext = async (moduleOptions: ModuleOptions, nuxt = useNux
         content: {
           files: [
             withSrcDir(`components/**/*${sfcExtensions}`),
-            withSrcDir(`pages/**/*${sfcExtensions}`),
             ...(() => {
               if (nuxtOptions.components) {
                 return (Array.isArray(nuxtOptions.components) ? nuxtOptions.components : typeof nuxtOptions.components === 'boolean' ? ['components'] : (nuxtOptions.components.dirs || [])).map((d) => {
